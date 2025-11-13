@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Home, Palette, Trees, Layers } from 'lucide-react';
+import pk1 from '../assests/pk1.jpeg'
+import pk2 from '../assests/pk2.jpeg';
+import pk3 from '../assests/pk3.jpeg';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('roofing');
@@ -9,7 +12,7 @@ export default function Services() {
       icon: Home,
       title: 'Premium Roofing',
       description: 'Expert roofing solutions that protect and enhance your property with lasting durability and aesthetic appeal.',
-      image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pk3,  // <--- local image
       features: [
         'Residential & Commercial Roofing',
         'Roof Repairs & Restoration',
@@ -23,7 +26,7 @@ export default function Services() {
       icon: Trees,
       title: 'Landscape Design',
       description: 'Transform outdoor spaces into stunning natural retreats with expert landscape architecture and sustainable design.',
-      image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pk2,  // <--- local image
       features: [
         'Custom Garden Design',
         'Hardscape Installation',
@@ -37,7 +40,7 @@ export default function Services() {
       icon: Layers,
       title: 'Construction',
       description: 'Full-service construction expertise from foundation to finish, delivering exceptional quality and precision.',
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pk3,  // <--- local image
       features: [
         'Custom Home Building',
         'Commercial Construction',
@@ -51,7 +54,7 @@ export default function Services() {
       icon: Palette,
       title: 'Architectural Moulding',
       description: 'Exquisite decorative moulding and millwork that adds elegance and character to any interior or exterior space.',
-      image: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pk2,  // <--- local image
       features: [
         'Crown Moulding',
         'Wainscoting & Paneling',
@@ -62,6 +65,7 @@ export default function Services() {
       ]
     }
   };
+  
 
   const tabs = [
     { id: 'roofing', label: 'Roofing', icon: Home },

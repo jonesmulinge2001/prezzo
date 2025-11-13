@@ -1,23 +1,17 @@
 import { CheckCircle2, Target, Heart, Shield } from 'lucide-react';
+import pk1 from '../assests/pk1.jpeg';
+import pk2 from '../assests/pk2.jpeg';
+import pk3 from '../assests/pk3.jpeg';
+
 
 export default function About() {
   const values = [
-    {
-      icon: Target,
-      title: 'Precision',
-      description: 'Meticulous attention to detail in every project'
-    },
-    {
-      icon: Heart,
-      title: 'Passion',
-      description: 'Dedicated craftsmanship in everything we create'
-    },
-    {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'Honest, transparent, and reliable service'
-    }
+    { icon: Target, title: 'Precision', description: 'Meticulous attention to detail in every project' },
+    { icon: Heart, title: 'Passion', description: 'Dedicated craftsmanship in everything we create' },
+    { icon: Shield, title: 'Integrity', description: 'Honest, transparent, and reliable service' }
   ];
+
+  const serviceImages = [pk1, pk2, pk3];
 
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-gray-50 to-white">
@@ -58,7 +52,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 mb-8">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
@@ -71,6 +65,15 @@ export default function About() {
                   </div>
                 );
               })}
+            </div>
+
+            {/* Service Images Gallery */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {serviceImages.map((img, idx) => (
+                <div key={idx} className="overflow-hidden rounded-xl shadow-md hover:scale-105 transition-transform">
+                  <img src={img} alt={`Service ${idx + 1}`} className="w-full h-32 object-cover" />
+                </div>
+              ))}
             </div>
           </div>
 
