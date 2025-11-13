@@ -25,8 +25,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      content:'0726675694',
+      link: 'tel:0726675694'
     },
     {
       icon: Mail,
